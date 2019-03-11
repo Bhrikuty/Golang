@@ -24,8 +24,9 @@ Name: {{ .Name }}
 Price: {{ printf "$%.2f" .Price }}
 Price with Tax: {{ .PriceWithTax | printf "$%.2f" }}   
 `
-
 //this | operation will pass the o/p of func "PriceWithTax" as the last argument to the printf
+
+
 func main() {
 	p := Product{
 		Name:  "Lemonade",
