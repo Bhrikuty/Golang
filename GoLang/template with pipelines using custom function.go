@@ -30,6 +30,6 @@ func main() {
 	fm["calctax"] = func(price float32) float32 { //assigning value to key
 		return price * (1 + tax)
 	}
-	t := template.Must(template.New("").Funcs(fm).Parse(templateString))
+	t := template.Must(template.New("").Funcs(fm).Parse(templateString))   //passing the fm
 	t.Execute(os.Stdout, p)
 }
